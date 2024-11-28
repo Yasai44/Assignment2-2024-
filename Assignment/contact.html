@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Cleopatra</title>
+    <style>
+
+        .contact-form {
+            width: 90%;
+            margin: 50px auto;
+            padding: 30px;
+            border: 5px solid #400b0b;
+            border-radius: 10px;
+            background-color:bisque;
+        }
+        .container{
+            background-color: burlywood;
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+
+        }
+        body{
+            background-color: burlywood;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .form-check {
+            margin-bottom: 0;
+        }
+        .form-check-label {
+            margin-left: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Cleopatra</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="gallery.html" class="dropbtn">Gallery</a>
+                <ul class="dropdown-content">
+                    <li>Paintings</li>
+    
+                </ul>    
+            </li>
+            <li class="dropdown">
+                <a href="media.html" class="dropbtn">Media</a>
+                <ul class="dropdown-content">
+                    <li>Social media</li>
+        
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li><a href="https://www.britannica.com/biography/Cleopatra-queen-of-Egypt">About</a></li>
+            <li><a href="https://www.history.com/topics/ancient-egypt/cleopatra">Legacy</a></li>
+            <li><a href="https://historicallywoman.wordpress.com/2020/08/14/cleopatra-ancient-egypts-femme-fatale/">Femme Fatale</a></li>
+        </ul>
+    </aside>
+
+    <div class="container">
+        <form class="contact-form needs-validation" novalidate>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                <div class="invalid-feedback">
+                    Please enter your name.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                <div class="invalid-feedback">
+                    Please enter your phone number.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" required>
+                <div class="invalid-feedback">
+                    Please select your date of birth.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="color">Favorite Color</label>
+                <input type="color" class="form-control" id="color" required>
+                <div class="invalid-feedback">
+                    Please choose your favorite color.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select class="form-control" id="subject" required>
+                    <option value="">Choose...</option>
+                    <option value="inquiry">Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a subject.
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" value="email" required>
+                    <label class="form-check-label" for="contactEmail">Email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contactMethod" id="contactPhone" value="phone" required>
+                    <label class="form-check-label" for="contactPhone">
+                        Phone
+                    </label>
+                </div>
+                <div class="invalid-feedback">
+                    Please select a preferred contact method.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <footer>
+        &copy; Sainabou Camara 2024
+       </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+</body>
+</html>
